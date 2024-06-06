@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Expense 1",
+      "amount": 100,
+      "payment_type": "Credit Card",
+      "date": "2024-06-01"
+    },
+    {
+      "id": 2,
+      "name": "Expense 2",
+      "amount": 75,
+      "payment_type": "Debit Card",
+      "date": "2024-06-02"
+    },
+    {
+      "id": 3,
+      "name": "Expense 3",
+      "amount": 50,
+      "payment_type": "PayPal",
+      "date": "2024-06-03"
+    },
+    {
+      "id": 4,
+      "name": "Expense 4",
+      "amount": 200,
+      "payment_type": "Credit Card",
+      "date": "2024-06-04"
+    },
+    {
+      "id": 5,
+      "name": "Expense 5",
+      "amount": 150,
+      "payment_type": "Debit Card",
+      "date": "2024-06-05"
+    }
+  ]
+  
