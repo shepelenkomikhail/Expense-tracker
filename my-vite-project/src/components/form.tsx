@@ -1,13 +1,27 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import FormB from "react-bootstrap/Form";
+import { MyContext } from "../context/myProvider";
+import { useContext } from "react";
 
 export default function Form() {
+  const content = useContext(MyContext);
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
     const form = e.currentTarget;
     const formData = new FormData(form);
     const formJson = Object.fromEntries(formData);
+
+    const newExpense = {
+      id: content ? content.data.length + 1 : 1,
+      name: formJson.name as string,
+      amount: Number(formJson.amount),
+      payment_type: formJson.type as string,
+      date: formJson.date as string,
+    };
+
+    content?.setData([...content.data, newExpense]);
 
     console.log(formJson);
   }

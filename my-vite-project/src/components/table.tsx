@@ -1,8 +1,11 @@
 import { Container } from "react-bootstrap";
 import TableB from "react-bootstrap/Table";
-import exp from "../data/content.json";
+import { useContext } from "react";
+import { MyContext } from "../context/myProvider";
 
 export default function Table() {
+  const content = useContext(MyContext);
+
   return (
     <Container>
       <TableB striped bordered hover>
@@ -16,8 +19,8 @@ export default function Table() {
           </tr>
         </thead>
         <tbody>
-          {exp.map((e, ind) => (
-            <tr>
+          {content?.data.map((e, ind) => (
+            <tr key={ind}>
               <td>{ind + 1}</td>
               <td>{e.name}</td>
               <td>{e.amount}</td>
