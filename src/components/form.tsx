@@ -29,6 +29,7 @@ export default function Form() {
       content?.setData([...content.data, newExpense]);
 
       console.log(formJson);
+      setValidated(false);
     }
 
     setValidated(true);
